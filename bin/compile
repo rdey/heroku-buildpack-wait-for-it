@@ -19,7 +19,7 @@ TARGET_FILE=$BUILD_DIR/bin/wait-for-it.sh
 echo "-----> Downloading wait-for-it.sh into app/bin"
 mkdir -p $BUILD_DIR/bin
 curl $SCRIPT_URL -s -L -o - > $TARGET_FILE
-echo "5bdc8a70f2b49a4e0ade1f2bfc3e180e2e6ce3118a78977cb913628dbb7dcb51  /app/bin/wait-for-it.sh" | shasum -a 256 -c -
+echo "5bdc8a70f2b49a4e0ade1f2bfc3e180e2e6ce3118a78977cb913628dbb7dcb51  $TARGET_FILE" | shasum -a 256 -c -
 chmod +x $TARGET_FILE
 
 echo "-----> wait-for-it.sh done"
